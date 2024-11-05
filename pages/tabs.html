@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/js.js"></script>
+    <script>
+        $( function() {
+          $( ".column" ).sortable({
+            connectWith: ".column",
+            handle: ".portlet-header",
+            cancel: ".portlet-toggle",
+            placeholder: "portlet-placeholder ui-corner-all"
+          });
+       
+          $( ".portlet" )
+            .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+            .find( ".portlet-header" )
+              .addClass( "ui-widget-header ui-corner-all" )
+              .prepend( "<span class='ui-icon ui-icon-minusthick portlet-toggle'></span>");
+       
+          $( ".portlet-toggle" ).on( "click", function() {
+            var icon = $( this );
+            icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+            icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+          });
+        } );
+        </script>
+        <style>
+            body {
+              min-width: 520px;
+            }
+            .column {
+              width: 170px;
+              float: left;
+              padding-bottom: 100px;
+            }
+            .portlet {
+              margin: 0 1em 1em 0;
+              padding: 0.3em;
+            }
+            .portlet-header {
+              padding: 0.2em 0.3em;
+              margin-bottom: 0.5em;
+              position: relative;
+            }
+            .portlet-toggle {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              margin-top: -8px;
+            }
+            .portlet-content {
+              padding: 0.4em;
+            }
+            .portlet-placeholder {
+              border: 1px dotted black;
+              margin: 0 1em 1em 0;
+              height: 50px;
+            }
+            </style>
+</head>
+<body>
+
+<header>
+    <h1>Getting Started with jQuery</h1>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
+            <li><a href="autocomplete.html">Autocomplete</a></li>
+            <li><a href="button.html">Button</a></li>
+            <li><a href="checkboxradio.html">Checkboxradio</a></li>
+            <li><a href="controlgroup.html">Controlgroup</a></li>
+            <li><a href="datepicker.html">Datepicker</a></li>
+            <li><a href="dialog.html">Diaglog</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="progressbar.html">Progressbar</a></li>
+            <li><a href="selectmenu.html">Selectmenu</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="spinner.html">Spinner</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="tooltip.html">Tooltip</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h2>Tabs</h2>
+        <div class="column">
+ 
+            <div class="portlet">
+              <div class="portlet-header">Feeds</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+           
+            <div class="portlet">
+              <div class="portlet-header">News</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+           
+          </div>
+           
+          <div class="column">
+           
+            <div class="portlet">
+              <div class="portlet-header">Shopping</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+           
+          </div>
+           
+          <div class="column">
+           
+            <div class="portlet">
+              <div class="portlet-header">Links</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+           
+            <div class="portlet">
+              <div class="portlet-header">Images</div>
+              <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+            </div>
+           
+          </div>
+           
+    </article>
+</section>
+
+<footer>
+    <p>College of Information and Computing Sciences &copy; 2024</p> 
+</footer>
+
+</body>
+</html>

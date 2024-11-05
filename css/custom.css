@@ -1,0 +1,57 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #5c123a;
+}
+header {
+    background: linear-gradient(135deg, #c24d9f, #5c123a, #ffc1d4);
+
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+nav {
+    background: linear-gradient(135deg, #b03a75, #4a0d44, #e8a9d6);
+
+    color: white;
+    padding: 1rem;
+    width: 200px; /* Set a fixed width for the navigation */
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    margin-bottom: 1rem; /* Add some spacing between each link */
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+section {
+    flex: 1;
+    display: flex;
+}
+article {
+    flex: 1;
+    padding: 1rem;
+    border-left: 1px solid #ddd;
+}
+footer {
+    background: linear-gradient(135deg, #a645a0, #501b56, #d8b4e0);
+
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+nav ul li a:hover {
+    color: #ffc1d4; /* Change the color when hovering */
+    text-decoration: underline; /* Optionally add underline on hover */
+    font-weight: bold; /* Optionally make it bold on hover */
+    transition: color 0.3s ease; /* Smooth transition for the color change */
+}

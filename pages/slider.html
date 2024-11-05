@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/js.js"></script>
+    <script>
+        $( function() {
+          // setup master volume
+          $( "#master" ).slider({
+            value: 60,
+            orientation: "horizontal",
+            range: "min",
+            animate: true
+          });
+          // setup graphic EQ
+          $( "#eq > span" ).each(function() {
+            // read initial values from markup and remove that
+            var value = parseInt( $( this ).text(), 10 );
+            $( this ).empty().slider({
+              value: value,
+              range: "min",
+              animate: true,
+              orientation: "vertical"
+            });
+          });
+        } );
+        </script>
+</head>
+<body>
+
+<header>
+    <h1>Getting Started with jQuery</h1>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="accordion.html">Accordion</a></li>
+            <li><a href="autocomplete.html">Autocomplete</a></li>
+            <li><a href="button.html">Button</a></li>
+            <li><a href="checkboxradio.html">Checkboxradio</a></li>
+            <li><a href="controlgroup.html">Controlgroup</a></li>
+            <li><a href="datepicker.html">Datepicker</a></li>
+            <li><a href="dialog.html">Diaglog</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="progressbar.html">Progressbar</a></li>
+            <li><a href="selectmenu.html">Selectmenu</a></li>
+            <li><a href="slider.html">Slider</a></li>
+            <li><a href="spinner.html">Spinner</a></li>
+            <li><a href="tabs.html">Tabs</a></li>
+            <li><a href="tooltip.html">Tooltip</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h2>Slider</h2>
+        <p class="ui-state-default ui-corner-all ui-helper-clearfix" style="padding:4px;">
+            <span class="ui-icon ui-icon-volume-on" style="float:left; margin:-2px 5px 0 0;"></span>
+            Master volume
+          </p>
+           
+          <div id="master" style="width:260px; margin:15px;"></div>
+           
+          <p class="ui-state-default ui-corner-all" style="padding:4px;margin-top:4em;">
+            <span class="ui-icon ui-icon-signal" style="float:left; margin:-2px 5px 0 0;"></span>
+            Graphic EQ
+          </p>
+           
+          <div id="eq">
+            <span>88</span>
+            <span>77</span>
+            <span>55</span>
+            <span>33</span>
+            <span>40</span>
+            <span>45</span>
+            <span>70</span>
+          </div>
+        
+    </article>
+</section>
+
+<footer>
+    <p>College of Information and Computing Sciences &copy; 2024</p> 
+</footer>
+
+</body>
+</html>
